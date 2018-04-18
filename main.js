@@ -68,6 +68,10 @@ class Department {
         // если нет, то надо нанимать новых
         console.log('NEED TO HIRE AT ', this.type.name);
     }
+
+    emulate() {
+        // вычеслить кол-во простоев и отработанных дней
+    }
 }
 
 class Director {
@@ -132,6 +136,9 @@ class Director {
         }
     }
 
+    emulation() {
+        // пробежаться по всех отделам, и эмулировать работу
+    }
 };
 
 /**------------- Основаня программа ------------------------- */
@@ -146,8 +153,7 @@ function startNewDay() {
     // получаем новые проекты
     ceo.getProjects(Util.getRandomNumber(1, 4));
     // распихиваем проекты по отделам
-    // ceo.sendProjectsToDepartaments();
-
+    ceo.sendProjectsToDepartaments();
     ceo.hire();
 }
 
